@@ -120,29 +120,32 @@
 		</div>
 	</section>
 
-	<section class="order-form" id="order_form">
-		<div class="timer">
-			<h3>Предложение действует</h3>
-			<p class="timer-values">
-				<span>0</span>
-				<span>0</span>
-				<span>0</span>
-				<span>0</span>
-				<span>0</span>
-				<span>0</span>
-			</p>
-			<p class="timer-legend">
-				<small>часов</small>
-				<small>минут</small>
-				<small>секунд</small>
-			</p>
-		</div>
-		<div class="timer-off">
-			<p style="color: #999;">// когда таймер закончился:</p>
-			<h3>Акционное предложение закончилось :(</h3>
+	<div id="order_form"></div>
+
+	<section class="section-timer">
+		<h2>Предложение действует:</h2>
+		<p class="timer-values">
+			<span>0</span>
+			<span>0</span>
+			<span>0</span>
+			<span>0</span>
+			<span>0</span>
+			<span>0</span>
+		</p>
+		<p class="timer-legend">
+			<span>часов</span>
+			<span>минут</span>
+			<span>секунд</span>
+		</p>
+	</section>
+
+
+	<section class="section-timer-off">
+			<h2>Акционное предложение закончилось :(</h2>
 			<p>Ожидайте новое предложение в ближайшие пару часов</p>
-			<p style="color: #999;">// след. предложение минут через 5-10</p>
-		</div>
+	</section>
+
+	<section class="order-form">
 		<form action="#">
 			<h2>Выберите термобельё:</h2>
 			<p class="halve">
@@ -183,12 +186,10 @@
 					<input type="text" placeholder="№ отделения Новой Почты" name="postoffice">
 				</label>
 			</p>
-			<p>
+			<p class="callback">
 				<label>
-					<select name="callback">
-						<option value="callback">Перезвоните мне, пожалуйста</option>
-						<option value="no-callback">Не нужно мне перезванивать, я уверен(а) в заказе</option>
-					</select>
+					<input type="radio" id="callback_yes" name="callback" value="callback-yes" checked><label for="callback_yes">Перезвоните мне, пожалуйста</label>
+					<input type="radio" id="callback_no" name="callback" value="callback-no"><label for="callback_no">Не нужно мне перезванивать, я уверен(а) в заказе</label>
 				</label>
 			</p>
 			<p class="button-buy"><a href="#checkout" id="order_male">Заказать</a></p>

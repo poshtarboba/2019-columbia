@@ -21,11 +21,11 @@ a {
 h1, h2, h3 {
 	margin: 0;
 	font-weight: 300;
+	text-align: center;
 }
 h2 {
 	padding-bottom: 12px;
 	font-size: 2em;
-	text-align: center;
 }
 h3 {
 	padding: 12px 0;
@@ -51,7 +51,6 @@ p {
 	padding: 10px 20px;
 	color: #fff;
 	text-decoration: none;
-	text-align: center;
 	background: #46c1be;
 	border-radius: 6px;
 	transition: background 200ms;
@@ -246,6 +245,57 @@ p {
 	color: #104455;
 }
 
+.section-timer,
+.section-timer-off {
+	position: relative;
+	padding: 40px 0;
+	color: #fff;
+	text-align: center;
+	background: url(../img/bg1.jpg) no-repeat center center;
+	background-size: cover;
+	background-attachment: fixed;
+}
+.section-timer:before,
+.section-timer-off:before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.6);
+}
+.section-timer > *,
+.section-timer-off > * {
+	position: relative;
+	z-index: 5;
+}
+.section-timer .timer-values {
+	font-size: 2.2em;
+	font-weight: bold;
+}
+.section-timer .timer-values span {
+	display: inline-block;
+	margin: 0;
+	padding: 1px 8px 3px;
+	background: #46c1be;
+}
+.section-timer .timer-values span:nth-child(2),
+.section-timer .timer-values span:nth-child(4) {
+	margin-right: 24px;
+}
+.section-timer .timer-legend {
+	padding-top: 0;
+}
+.section-timer .timer-legend span {
+	display: inline-block;
+	width: 81px;
+}
+.section-timer .timer-legend span:nth-child(2) {
+	margin: 0 30px;
+}
+
+
 .order-form .halve {
 	display: flex;
 	justify-content: space-around;
@@ -300,4 +350,37 @@ p {
 	bottom: 1px;
 	border: 1px solid #fff;
 	border-radius: 50%;
+}
+.order-form input[type="text"] {
+	display: block;
+	padding: 10px 20px 10px 48px;
+	width: 100%;
+	box-sizing: border-box;
+	font-size: 1.2em;
+	color: #104455;
+	background: #fff no-repeat 12px 10px;
+	border: 1px solid #46c1be;
+	border-radius: 6px;
+}
+.order-form input[type="text"]:focus {
+	background: #46c1be22;
+}
+.order-form input[name="name"] {
+	background-image: url(../img/icon-name.png);
+}
+.order-form input[name="phone"] {
+	background-image: url(../img/icon-phone.png);
+}
+.order-form input[name="place"] {
+	background-image: url(../img/icon-place.png);
+}
+.order-form input[name="postoffice"] {
+	background-image: url(../img/icon-postoffice.png);
+}
+.order-form .callback input {
+	/*display: none;*/
+}
+.order-form .callback label {
+	display: block;
+	cursor: pointer;
 }
