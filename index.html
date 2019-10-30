@@ -59,7 +59,7 @@
 		</ul>-->
 		<img class="image-centered" src="img/about1.jpg" alt="Натуральная ткань, анатомический крой, натуральный бактериосептик">
 		<ul class="product-info">
-			<li><strong>Материал:</strong> 95 полиэстр, 5 эластан</li>
+			<li><strong>Материал:</strong> 95% полиэстр, 5% эластан</li>
 			<li><strong>Сезон:</strong> Осень/Зима/Весна</li>
 			<li><strong>Цвет:</strong>  Черный</li>
 		</ul>
@@ -71,7 +71,7 @@
 				<span class="new-price">Цена сегодня: <strong>499 грн.</strong></span>
 				<span class="discount-label">50%</span>
 			</p>
-			<p class="button-buy"><a href="#checkout" id="order_female">Оформить заказ</a></p>
+			<p class="button-buy"><a href="#order_form">Оформить заказ</a></p>
 		</div>
 		<div class="product-buy">
 			<img class="image-centered" src="img/product-male.jpg" alt="Мужские размеры">
@@ -81,7 +81,7 @@
 				<span class="new-price">Цена сегодня: <strong>499 грн.</strong></span>
 				<span class="discount-label">50%</span>
 			</p>
-			<p class="button-buy"><a href="#checkout" id="order_male">Оформить заказ</a></p>
+			<p class="button-buy"><a href="#order_form">Оформить заказ</a></p>
 		</div>
 	</section>
 
@@ -120,7 +120,7 @@
 		</div>
 	</section>
 
-	<section class="order-form">
+	<section class="order-form" id="order_form">
 		<div class="timer">
 			<h3>Предложение действует</h3>
 			<p class="timer-values">
@@ -144,19 +144,24 @@
 			<p style="color: #999;">// след. предложение минут через 5-10</p>
 		</div>
 		<form action="#">
-			<p>
-				<label>
-					<select name="product" placeholder="Выберите термобельё">
-						<option value="female-s">Женское S</option>
-						<option value="female-m">Женское M</option>
-						<option value="female-l">Женское L</option>
-						<option value="female-xl">Женское XL</option>
-						<option value="male-m">Мужское M</option>
-						<option value="male-l">Мужское L</option>
-						<option value="male-xl">Мужское XL</option>
-						<option value="male-xxl">Мужское XXL</option>
-					</select>
-				</label>
+			<h2>Выберите термобельё:</h2>
+			<p class="halve">
+				<span>Женское:</span>
+				<span>Мужское:</span>
+			</p>
+			<p class="halve product-size">
+				<span>
+					<input type="checkbox" id="female_s" name="female-s" value="female-s"><label for="female_s" class="fml">S</label>
+					<input type="checkbox" id="female_m" name="female-m" value="female-m"><label for="female_m" class="fml">M</label>
+					<input type="checkbox" id="female_l" name="female-l" value="female-l"><label for="female_l" class="fml">L</label>
+					<input type="checkbox" id="female_xl" name="female-xl" value="female-xl"><label for="female_xl" class="fml">XL</label>
+				</span>
+				<span>
+					<input type="checkbox" id="male_m" name="male-m" value="male-m"><label for="male_m" class="ml">M</label>
+					<input type="checkbox" id="male_l" name="male-l" value="male-l"><label for="male_l" class="ml">L</label>
+					<input type="checkbox" id="male_xl" name="male-xl" value="male-xl"><label for="male_xl" class="ml">XL</label>
+					<input type="checkbox" id="male_xxl" name="male-xxl" value="male-xxl"><label for="male_xxl" class="ml">XXL</label>
+				</span>
 			</p>
 			<p>
 				<label>
@@ -186,7 +191,7 @@
 					</select>
 				</label>
 			</p>
-			<p class="button-buy"><a href="#checkout" id="order_male">Оформить заказ</a></p>
+			<p class="button-buy"><a href="#checkout" id="order_male">Заказать</a></p>
 		</form>
 		<p class="left-count">Осталось <span>5</span> единиц по акции</p>
 	</section>

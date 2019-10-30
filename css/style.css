@@ -25,6 +25,7 @@ h1, h2, h3 {
 h2 {
 	padding-bottom: 12px;
 	font-size: 2em;
+	text-align: center;
 }
 h3 {
 	padding: 12px 0;
@@ -34,6 +35,10 @@ h3 {
 p {
 	margin: 0;
 	padding: 12px 0;
+}
+
+.text-center {
+	text-align: center;
 }
 
 
@@ -239,4 +244,60 @@ p {
 	font-size: 1.5em;
 	font-weight: bold;
 	color: #104455;
+}
+
+.order-form .halve {
+	display: flex;
+	justify-content: space-around;
+	text-align: center;
+}
+.order-form .halve > span {
+	flex: none;
+	width: 50%;
+}
+.order-form .product-size input {
+	display: none;
+}
+.order-form .product-size label {
+	position: relative;
+	display: inline-block;
+	margin: 0 2px;
+	padding-top: 8px;
+	width: 48px;
+	height: 48px;
+	font-size: 1.3em;
+	box-sizing: border-box;
+	border: 1px solid;
+	border-radius: 50%;
+	cursor: pointer;
+	transition: all 200ms;
+}
+.order-form .product-size label.fml {
+	color: #46c1be;
+	border-color: #46c1be;
+}
+.order-form .product-size label.ml {
+	color: #104455;
+	border-color: #104455;
+}
+.order-form .product-size input:checked + label.fml,
+.order-form .product-size label.fml:hover {
+	color: #fff;
+	background: #46c1be;
+}
+.order-form .product-size input:checked + label.ml,
+.order-form .product-size label.ml:hover {
+	color: #fff;
+	background: #104455;
+}
+.order-form .product-size input:checked + label:before,
+.order-form .product-size label:hover:before {
+	content: "";
+	position: absolute;
+	left: 1px;
+	top: 1px;
+	right: 1px;
+	bottom: 1px;
+	border: 1px solid #fff;
+	border-radius: 50%;
 }
