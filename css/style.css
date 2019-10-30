@@ -1,0 +1,242 @@
+html {
+	scroll-behavior: smooth;
+}
+body {
+	margin: 0;
+	background: #fff;
+	font-family: 'Open Sans', sans-serif;
+	color: #212529;
+}
+.clearfix:after,
+.price:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+a {
+	color: #46c1be;
+}
+
+h1, h2, h3 {
+	margin: 0;
+	font-weight: 300;
+}
+h2 {
+	padding-bottom: 12px;
+	font-size: 2em;
+}
+h3 {
+	padding: 12px 0;
+	font-size: 1.5em;
+	font-weight: normal;
+}
+p {
+	margin: 0;
+	padding: 12px 0;
+}
+
+
+.button-buy {
+	text-align: center;
+}
+.button-buy a,
+.button-buy input[type="submit"] {
+	display: inline-block;
+	padding: 10px 20px;
+	color: #fff;
+	text-decoration: none;
+	text-align: center;
+	background: #46c1be;
+	border-radius: 6px;
+	transition: background 200ms;
+}
+.button-buy a:hover,
+.button-buy input[type="submit"]:hover {
+	background: #104455;
+}
+
+.price {
+	margin: 0 auto 12px;
+	width: 380px;
+	text-align: center;
+	color: #fff;
+}
+.price > * {
+	float: left;
+	padding: 10px 0;
+	width: 50%;
+}
+.price span {
+	display: block;
+	font-size: 2em;
+	font-weight: bold;
+}
+.price .old-price {
+	background: #104455;
+}
+.price .new-price {
+	background: #46c1be;
+}
+.price .old-price span {
+	text-decoration: line-through;
+}
+.left-count {
+	text-align: center;
+}
+.left-count span {
+	display: inline-block;
+	margin: 0 2px;
+	padding: 1px 8px;
+	font-weight: bold;
+	color: #fff;
+	background: #46c1be;
+}
+.product-info {
+	margin: 0 auto;
+	padding: 20px 0;
+	list-style: none;
+	max-width: 480px;
+	text-align: right;
+}
+.product-info li {
+	padding: 10px 20px;
+}
+.product-info li:not(:last-child) {
+	border-bottom: 1px solid #46c1be;
+}
+.product-info strong {
+	float: left;
+}
+.image-centered {
+	display: block;
+	margin: 0 auto;
+	width: 100%;
+}
+
+.product-buy {
+	text-align: center;
+}
+.product-buy .old-price {
+	text-decoration: line-through;
+}
+.product-buy .new-price {
+	margin-left: 12px;
+	font-size: 1.2em;
+}
+.product-buy .new-price strong {
+	font-size: 1.2em;
+}
+.product-buy .discount-label {
+	position: relative;
+	display: inline-block;
+	padding: 4px 6px;
+	color: #fff;
+	font-size: 0.9em;
+	line-height: 1em;
+	background: #46c1be;
+	border-radius: 50%;
+	transform: translate(-15px, -20px) rotate(12deg);
+}
+
+
+
+
+.section-main {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	min-height: 100vh;
+	color: #fff;
+	text-align: center;
+	background: url(../img/bg1.jpg) no-repeat center center;
+	background-size: cover;
+	background-attachment: fixed;
+}
+.section-main:before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.4);
+}
+.section-main .center-content {
+	position: relative;
+	z-index: 5;
+	padding: 20px 0;
+	background: rgba(0, 0, 0, 0.6);
+}
+.section-main h1 {
+	font-size: 3em;
+	line-height: 1.5em;
+}
+.section-main h1 strong {
+	display: block;
+	text-transform: uppercase;
+	letter-spacing: 4px;
+}
+.section-main .about-product {
+	margin: 0 auto;
+	width: 380px;
+}
+.section-main .discount {
+	position: absolute;
+	left: 50%;
+	bottom: 280px;
+	padding: 16px 20px;
+	transform: translate(-290px, 0) rotate(-12deg);
+	background: rgba(255, 255, 255, 0.2);
+	border-radius: 50%;
+}
+.section-main .discount span {
+	display: block;
+	font-size: 1.5em;
+	font-weight: bold;
+	color: #46c1be;
+}
+.section-main ul {
+	margin: 0 auto;
+	padding: 20px 0;
+	list-style: none;
+	width: 380px;
+	font-size: 1.2em;
+	line-height: 1.6em;
+}
+.section-main .button-buy a {
+	background: rgba(255, 255, 255, 0.2);
+}
+.section-main .button-buy a:hover {
+	background: rgba(255, 255, 255, 0.1);
+}
+
+
+.section-about,
+.section-howorder,
+.order-form {
+	margin: 0 auto;
+	padding: 50px 0;
+	max-width: 480px;
+}
+.section-howorder .order-result {
+	position: relative;
+}
+.section-howorder .discount {
+	position: absolute;
+	left: 0;
+	top: 100px;
+	padding: 16px 20px;
+	color: #fff;
+	text-align: center;
+	transform: rotate(-12deg);
+	background: #46c1be;
+	border-radius: 50%;
+}
+.section-howorder .discount span {
+	display: block;
+	font-size: 1.5em;
+	font-weight: bold;
+	color: #104455;
+}
