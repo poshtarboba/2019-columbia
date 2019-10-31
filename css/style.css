@@ -15,6 +15,9 @@ body {
 }
 
 a {
+	color: #104455;
+}
+a:hover {
 	color: #46c1be;
 }
 
@@ -363,7 +366,7 @@ p {
 	border-radius: 6px;
 }
 .order-form input[type="text"]:focus {
-	background: #46c1be22;
+	background-color: #46c1be22;
 }
 .order-form input[name="name"] {
 	background-image: url(../img/icon-name.png);
@@ -378,9 +381,46 @@ p {
 	background-image: url(../img/icon-postoffice.png);
 }
 .order-form .callback input {
-	/*display: none;*/
+	display: none;
 }
 .order-form .callback label {
+	position: relative;
 	display: block;
+	padding: 12px 0 12px 48px;
 	cursor: pointer;
+}
+.order-form .callback label:before,
+.order-form .callback label:after {
+	content: "";
+	position: absolute;
+	left: 10px;
+	top: 9px;
+	box-sizing: border-box;
+	border-radius: 50%;
+}
+.order-form .callback label:before {
+	width: 26px;
+	height: 26px;
+	border: 1px solid #46c1be;
+}
+.order-form .callback label:after {
+	width: 14px;
+	height: 14px;
+	background: #46c1be;
+	transform: translate(6px, 6px);
+	opacity: 0;
+	transition: opacity 200ms;
+}
+.order-form .callback input:checked + label:after {
+	opacity: 1;
+}
+
+footer {
+	padding: 12px 0 16px;
+	text-align: center;
+	font-size: 0.8em;
+	border-top: 1px solid #10445522;
+}
+footer p {
+	padding: 4px 0;
 }
