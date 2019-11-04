@@ -5,7 +5,7 @@
 	$order = '';
 	$callback = '';
 	$echo_msg = 'Заказ передан оператору, ожидайте звонка';
-	if ($_POST['callback-no']) {
+	if ($_POST['callback'] == 'callback-no') {
 		$callback = 'НЕ НУЖЕН, только SMS';
 		$echo_msg = 'Заказ передан оператору, ожидайте SMS с номером заказа';
 	}

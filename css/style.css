@@ -55,12 +55,20 @@ p {
 	color: #fff;
 	text-decoration: none;
 	background: #46c1be;
+	border: none;
+	font-size: 1.2rem;
 	border-radius: 6px;
 	transition: background 200ms;
+	cursor: pointer;
 }
 .button-buy a:hover,
 .button-buy input[type="submit"]:hover {
 	background: #104455;
+}
+.button-buy input[type="submit"]:disabled,
+.button-buy input[type="submit"]:disabled:hover {
+	cursor: not-allowed;
+	opacity: 0.5;
 }
 
 .price {

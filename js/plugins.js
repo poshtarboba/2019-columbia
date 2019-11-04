@@ -33,7 +33,7 @@ function discountTimer(timers, timersBoxes, timeIsOverBoxes, discountProductsCou
 		// задаём случайное значение 19-22 часа, 7-50 мин, 11-42 сек
 		let result = ((r(19, 22) * 60 + r(7, 50)) * 60 + r(11, 42)) * 1000;
 		// генерим массив времён для discountProductsCount
-		let arr = [], n = r(12, 18), t = result;
+		let arr = [result + now], n = r(12, 17), t = result;
 		for (let i = 0; i < n; i++) {
 			let k = Math.round((Math.random() / 4 + 0.25) * t);
 			arr.push(k + now);
@@ -80,18 +80,59 @@ function discountTimer(timers, timersBoxes, timeIsOverBoxes, discountProductsCou
 }
 
 function formValidarot(){
-	document.querySelector('[name="phone"]').addEventListener('input', function (){
+	const form = document.querySelector('.order-form form');
+	const textInputs = form.querySelectorAll('.js-validation');
+	const inputName = form.querySelector('[name="name"]');
+	const inputPhone = form.querySelector('[name="phone"]');
+	const inputPlace = form.querySelector('[name="place"]');
+	const inputPostoffice = form.querySelector('[name="postoffice"]');
+	const sizes = form.querySelectorAll('.product-size input');
+	const inputSubmit = form.querySelector('[type="submit"]');
+	inputName.addEventListener('input', function (){
+		this.value = this.value.trim();
+	});
+	inputPlace.addEventListener('input', function (){
+		this.value = this.value.trim();
+	});
+	inputPhone.addEventListener('input', function (){
 		// только цифры, пробелы, минусы, вначале может быть плюс
-		let val = this.value;
+		let val = this.value.trim();
 		let start = val[0] === '+' ? '+' : '';
 		val = val.replace(/[^\d -]/g, '');
 		this.value = start + val;
 	});
-	document.querySelector('[name="postoffice"]').addEventListener('input', function (){
+	inputPostoffice.addEventListener('input', function (){
 		// только цифры, вначале может быть номер или решетка
 		let val = this.value;
 		let start = val[0] === '№' || val[0] === '#' ? val[0] : '';
 		val = val.replace(/[^\d -]/g, '');
 		this.value = start + val;
+	});
+	textInputs.forEach(input => input.addEventListener('input', checkSubmit));
+	sizes.forEach(input => input.addEventListener('change', checkSubmit));
+
+	function checkSubmit(){
+		inputSubmit.disabled = !(
+				inputName.value.length >= 2
+				&&
+				inputPhone.value.length >= 7
+				&&
+				inputPlace.value.length >= 3
+				&&
+				inputPostoffice.value.length
+				&&
+				Array.prototype.some.call(sizes, checkbox => checkbox.checked)
+			);
+	}
+	form.addEventListener('submit', function (e){
+		e.preventDefault();
+		let body = Array.prototype.map.call(textInputs, input => input.name + '=' + encodeURIComponent(input.value)).join('&');
+		sizes.forEach(checkbox => { if (checkbox.checked) body += '&' + checkbox.name + '=' + checkbox.value; });
+		console.log(body);
+		let options = { method: 'POST', body };
+		inputSubmit.style.visibility = 'false';
+		fetch(form.getAttribute('action'), options)
+			.then(response => response.text())
+			.then(text => alert(text));
 	});
 }

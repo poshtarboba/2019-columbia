@@ -146,49 +146,49 @@
 	</section>
 
 	<section class="order-form">
-		<form action="#">
+		<form action="send.php" method="POST">
 			<h2>Выберите термобельё:</h2>
 			<p class="halve product-size">
 				<span>
 					Женское<br><br>
-					<input type="checkbox" id="female_s" name="female-s" value="female-s"><label for="female_s" class="fml">S</label>
-					<input type="checkbox" id="female_m" name="female-m" value="female-m"><label for="female_m" class="fml">M</label>
-					<input type="checkbox" id="female_l" name="female-l" value="female-l"><label for="female_l" class="fml">L</label>
-					<input type="checkbox" id="female_xl" name="female-xl" value="female-xl"><label for="female_xl" class="fml">XL</label>
+					<input type="checkbox" id="female_s" name="female-s" value="1"><label for="female_s" class="fml">S</label>
+					<input type="checkbox" id="female_m" name="female-m" value="1"><label for="female_m" class="fml">M</label>
+					<input type="checkbox" id="female_l" name="female-l" value="1"><label for="female_l" class="fml">L</label>
+					<input type="checkbox" id="female_xl" name="female-xl" value="1"><label for="female_xl" class="fml">XL</label>
 				</span>
 				<span>
 					Мужское:<br><br>
-					<input type="checkbox" id="male_m" name="male-m" value="male-m"><label for="male_m" class="ml">M</label>
-					<input type="checkbox" id="male_l" name="male-l" value="male-l"><label for="male_l" class="ml">L</label>
-					<input type="checkbox" id="male_xl" name="male-xl" value="male-xl"><label for="male_xl" class="ml">XL</label>
-					<input type="checkbox" id="male_xxl" name="male-xxl" value="male-xxl"><label for="male_xxl" class="ml">XXL</label>
+					<input type="checkbox" id="male_m" name="male-m" value="1"><label for="male_m" class="ml">M</label>
+					<input type="checkbox" id="male_l" name="male-l" value="1"><label for="male_l" class="ml">L</label>
+					<input type="checkbox" id="male_xl" name="male-xl" value="1"><label for="male_xl" class="ml">XL</label>
+					<input type="checkbox" id="male_xxl" name="male-xxl" value="1"><label for="male_xxl" class="ml">XXL</label>
 				</span>
 			</p>
 			<p>
 				<label>
-					<input type="text" placeholder="Ваши имя и фамилия" name="name" maxlength="32">
+					<input type="text" class="js-validation" placeholder="Ваши имя и фамилия" name="name" maxlength="32">
 				</label>
 			</p>
 			<p>
 				<label>
-					<input type="text" placeholder="Ваш телефон" name="phone" maxlength="16">
+					<input type="text" class="js-validation" placeholder="Ваш телефон" name="phone" maxlength="16">
 				</label>
 			</p>
 			<p>
 				<label>
-					<input type="text" placeholder="Ваш город" name="place" maxlength="48">
+					<input type="text" class="js-validation" placeholder="Ваш город" name="place" maxlength="48">
 				</label>
 			</p>
 			<p>
 				<label>
-					<input type="text" placeholder="№ отделения Новой Почты" name="postoffice" maxlength="6">
+					<input type="text" class="js-validation" placeholder="№ отделения Новой Почты" name="postoffice" maxlength="6">
 				</label>
 			</p>
 			<p class="callback">
 				<input type="radio" id="callback_yes" name="callback" value="callback-yes" checked><label for="callback_yes">Перезвоните мне, пожалуйста</label>
 				<input type="radio" id="callback_no" name="callback" value="callback-no"><label for="callback_no">Не нужно мне перезванивать, я уверен(а) в заказе</label>
 			</p>
-			<p class="button-buy"><a href="#checkout" id="order_male">Заказать</a></p>
+			<p class="button-buy"><input type="submit" value="Заказать" disabled></p>
 		</form>
 		<p class="left-count">Осталось <span>5</span> единиц по акции</p>
 	</section>
