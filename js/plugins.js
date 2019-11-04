@@ -88,15 +88,9 @@ function formValidarot(){
 	const inputPostoffice = form.querySelector('[name="postoffice"]');
 	const sizes = form.querySelectorAll('.product-size input');
 	const inputSubmit = form.querySelector('[type="submit"]');
-	inputName.addEventListener('input', function (){
-		this.value = this.value.trim();
-	});
-	inputPlace.addEventListener('input', function (){
-		this.value = this.value.trim();
-	});
 	inputPhone.addEventListener('input', function (){
 		// только цифры, пробелы, минусы, вначале может быть плюс
-		let val = this.value.trim();
+		let val = this.value;
 		let start = val[0] === '+' ? '+' : '';
 		val = val.replace(/[^\d -]/g, '');
 		this.value = start + val;
