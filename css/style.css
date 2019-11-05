@@ -46,7 +46,24 @@ p {
 
 
 .button-buy {
+	position: relative;
 	text-align: center;
+}
+.button-buy span.submit-info {
+	position: absolute;
+	z-index: 5;
+	display: none;
+	left: 50%;
+	top: 0;
+	padding: 8px 0;
+	width: 240px;
+	background: #fff3;
+	border: 1px solid #46c1be;
+	transform: translate(-50%, 0);
+	opacity: 0.7;
+}
+.button-buy *:disabled ~ span.submit-info {
+	display: block;
 }
 .button-buy a,
 .button-buy input[type="submit"] {
