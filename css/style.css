@@ -23,7 +23,7 @@ a:hover {
 
 h1, h2, h3 {
 	margin: 0;
-	font-weight: 300;
+	font-weight: bold;
 	text-align: center;
 }
 h2 {
@@ -101,7 +101,7 @@ p {
 }
 .price span {
 	display: block;
-	font-size: 2em;
+	font-size: 1.8em;
 	font-weight: bold;
 }
 .price .old-price {
@@ -301,7 +301,7 @@ p {
 }
 .section-howorder li strong {
 	display: block;
-	font-size: 2em;
+	font-size: 1.7em;
 	line-height: 1.5em;
 	color: #46c1be;
 }
@@ -516,13 +516,13 @@ footer p {
 		width: auto;
 	}
 	.section-howorder li:nth-child(even) {
-		padding-left: 0;
+		padding-left: 110px;
 	}
 	.section-howorder li:nth-child(odd) {
-		padding-right: 0;
+		padding-right: 110px;
 	}
 	.section-howorder li img {
-		opacity: 0.3;
+		width: 100px;
 	}
 	.section-timer .timer-values {
 		letter-spacing: -2px;
