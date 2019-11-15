@@ -494,7 +494,12 @@ footer p {
 		position: static;
 		transform: none;
 		margin: 0 auto;
-		width: 180px;
+		padding: 8px 20px;
+		width: 120px;
+		font-size: 0.8em;
+	}
+	.section-main ul {
+		padding-top: 8px;
 	}
 	.section-about,
 	.section-howorder,
