@@ -18,7 +18,7 @@ function discountTimer(timers, timersBoxes, timeIsOverBoxes, discountProductsCou
 		// таймер задан, но просрочен менее 5 минут назад / более 5 минут
 		if (endTime + 300 * 1000 > now) return timeIsOver();
 		else endTime = null;
-	if (!endTime) localStorage.setItem('ltm', endTime = now + rndTime());
+	if (!endTime) localStorage.setItem('ltm pkk', endTime = now + rndTime());
 
 	showTime();
 	const timerId = setInterval(() => {

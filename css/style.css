@@ -483,6 +483,12 @@ footer p {
 	padding: 4px 0;
 }
 
+@media screen and (max-width: 840px) {
+	.section-main h1 {
+		font-size: 2em;
+	}
+}
+
 @media screen and (max-width: 640px) {
 	.section-main .discount {
 		position: static;
