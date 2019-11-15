@@ -490,6 +490,9 @@ footer p {
 }
 
 @media screen and (max-width: 640px) {
+	.section-main .center-content {
+		padding: 10px 0;
+	}
 	.section-main .discount {
 		position: static;
 		transform: none;
